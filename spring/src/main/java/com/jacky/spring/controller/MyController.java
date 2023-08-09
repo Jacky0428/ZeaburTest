@@ -1,5 +1,6 @@
 package com.jacky.spring.controller;
 
+import com.jacky.DomainTest;
 import com.jacky.spring.entity.User;
 import com.jacky.spring.repository.MyRepository;
 import lombok.RequiredArgsConstructor;
@@ -20,7 +21,8 @@ public class MyController {
     // hello
     @RequestMapping("/hello")
     public String hello() {
-        return "Hello World2!";
+        DomainTest domainTest = new DomainTest();
+        return "Hello World2! " + domainTest.name;
     }
 
     // findAll
